@@ -1,0 +1,169 @@
+/* **************** */
+/*        RESET        */
+/* **************** */
+
+/* box sizing */
+*,
+*::before,
+*:active {
+  box-sizing: border-box;
+}
+
+/* reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+/* resetting font-weight on headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+/* set up the body */
+body {
+  font-family: var(--ff-montserrat);
+  font-size: var(--fs-400);
+  color: hsl(var(--clr-greyblue));
+  background-color: hsl(var(--clr-cream));
+  line-height: 1.5;
+  max-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ******************** */
+/*   UTILITY CLASSES  */
+/* *********************/
+
+/* general */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+}
+
+.container {
+  margin-inline: auto;
+  width: 90%;
+  justify-content: center;
+}
+
+body {
+  background-image: url(./images/bg-desktop.svg);
+  background-color: hsl(257, 40%, 49%);
+  background-size: cover;
+}
+
+.grid-container {
+  grid-template-columns: 55% 45%;
+  grid-template-rows: 10% 30% 30% 10% 20%;
+  margin-top: 6vh;
+  grid-template-areas:
+    "logo ."
+    "image title"
+    "image text"
+    "image button"
+    "image icons";
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.illustration {
+  height: 50rem;
+  width: 70rem;
+  grid-area: image;
+  margin-top: 6rem;
+}
+
+.title {
+  color: #ffffff;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 4rem;
+  grid-area: title;
+}
+
+.text {
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 2rem;
+  grid-area: text;
+}
+
+.btn {
+  border: none;
+  background-color: #ffffff;
+  color: hsl(257, 40%, 49%);
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1.5rem;
+  height: 4rem;
+  width: 15rem;
+  border-radius: 5rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  grid-area: button;
+}
+
+.icon-div {
+  grid-area: icons;
+}
+
+.icons {
+  color: #ffffff;
+  height: 3rem;
+  width: 3rem;
+}
+
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
