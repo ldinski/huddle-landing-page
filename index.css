@@ -98,8 +98,10 @@ body {
 }
 
 .grid-container {
-  grid-template-columns: 55% 45%;
-  grid-template-rows: 10% 30% 30% 10% 20%;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 10% 25% 35% 10% 20%;
+  margin: 0 auto;
+  gap: 1rem;
   margin-top: 6vh;
   grid-template-areas:
     "logo ."
@@ -114,8 +116,8 @@ body {
 }
 
 .illustration {
-  height: 50rem;
-  width: 70rem;
+  height: 40rem;
+  width: 60rem;
   grid-area: image;
   margin-top: 6rem;
 }
@@ -124,15 +126,17 @@ body {
   color: #ffffff;
   font-family: "Poppins";
   font-weight: 600;
-  font-size: 4rem;
+  font-size: 3.4rem;
   grid-area: title;
+  margin-top: 9rem;
+  padding-right: 2rem;
 }
 
 .text {
   color: #ffffff;
   font-family: "Open Sans";
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.65rem;
   grid-area: text;
 }
 
@@ -143,27 +147,137 @@ body {
   font-family: "Poppins";
   font-weight: 400;
   font-size: 1.5rem;
-  height: 4rem;
-  width: 15rem;
+  height: 5rem;
+  width: 20rem;
   border-radius: 5rem;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   grid-area: button;
+  margin-top: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover,
+.btn:active {
+  color: #ffffff;
+  background-color: hsl(300, 69%, 71%);
+  cursor: pointer;
 }
 
 .icon-div {
   grid-area: icons;
+  gap: 1.5rem;
+  justify-content: end;
+  margin-top: 10rem;
 }
 
 .icons {
   color: #ffffff;
-  height: 3rem;
-  width: 3rem;
+  height: 1.75rem;
+  width: 1.75rem;
+  padding: 1rem;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
 }
 
-/* .attribution {
-  font-size: 11px;
-  text-align: center;
+.icons:hover,
+.icons:active {
+  color: hsl(300, 69%, 71%);
+  border-color: hsl(300, 69%, 71%);
+  cursor: pointer;
 }
+
+.attribution {
+  font-size: 1rem;
+  text-align: right;
+  font-family: "Poppins";
+  color: #000;
+  margin-right: 30rem;
+}
+
 .attribution a {
-  color: hsl(228, 45%, 44%);
-} */
+  color: hsl(300, 69%, 71%);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  color: hsl(300, 100%, 59%);
+}
+
+@media (max-width: 56em) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    grid-template-areas:
+      "logo"
+      "image"
+      "title"
+      "text"
+      "button"
+      "icons";
+  }
+
+  .logo {
+    padding: 0;
+    margin-top: 1.5rem;
+    height: 3rem;
+  }
+
+  .illustration {
+    padding: 0;
+    height: 15rem;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    padding: 0;
+    text-align: center;
+  }
+
+  .text {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+    padding-inline: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    height: 3rem;
+    width: 12rem;
+    margin-top: 1.5rem;
+    margin-inline: auto;
+  }
+
+  .btn:hover,
+  .btn:active {
+    color: #ffffff;
+    background-color: hsl(300, 69%, 71%);
+    cursor: pointer;
+  }
+
+  .icon-div {
+    margin-top: 2rem;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+
+  .icons {
+    height: 1.25rem;
+    width: 1.25rem;
+    padding: 0.5rem;
+    border: 1px solid #ffffff;
+  }
+
+  .attribution {
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-inline: 0;
+  }
+}
