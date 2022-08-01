@@ -99,7 +99,7 @@ body {
 
 .grid-container {
   grid-template-columns: 60% 40%;
-  grid-template-rows: 10% 25% 35% 10% 20%;
+  grid-template-rows: 10% 35% 23% 15% 20%;
   margin: 0 auto;
   gap: 1rem;
   margin-top: 6vh;
@@ -128,7 +128,7 @@ body {
   font-weight: 600;
   font-size: 3.4rem;
   grid-area: title;
-  margin-top: 9rem;
+  align-self: end;
   padding-right: 2rem;
 }
 
@@ -193,6 +193,7 @@ body {
   font-family: "Poppins";
   color: #000;
   margin-right: 30rem;
+  padding-top: 8rem;
 }
 
 .attribution a {
@@ -207,6 +208,7 @@ body {
 @media (max-width: 56em) {
   .grid-container {
     grid-template-columns: 1fr;
+    grid-template-rows: 10% 30% 15% 15% 8%;
     margin: 0 auto;
     grid-template-areas:
       "logo"
@@ -249,7 +251,7 @@ body {
     font-size: 1rem;
     height: 3rem;
     width: 12rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     margin-inline: auto;
   }
 
@@ -277,7 +279,7 @@ body {
   .attribution {
     font-size: 0.8rem;
     text-align: center;
-    margin-top: 2rem;
-    margin-inline: 0;
+    margin: 0;
+    padding: 0;
   }
 }
